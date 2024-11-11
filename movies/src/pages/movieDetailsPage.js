@@ -6,7 +6,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-const App = () => {
+const MoviePage = () => {
 const { id } = useParams();
 const [movie, setMovie] = useState(null);
 const [images, setImages] = useState([]);
