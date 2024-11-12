@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\movies",
+    "\\movies\\src",
+    "\\movies\\src\\api",
+    "\\movies\\src\\components",
+    "\\movies\\src\\components\\movieReview",
+    "\\movies\\src\\components\\movieReviews",
+    "\\movies\\src\\components\\templateMoviePage"
+  ],
+  "SelectedNode": "\\movies\\src\\api\\tmdb-api.js",
+  "PreviewInSolutionExplorer": false
+}

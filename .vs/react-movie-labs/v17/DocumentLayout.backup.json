@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\react-movie-labs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\react-movie-labs\\movies\\src\\api\\tmdb-api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:movies\\src\\api\\tmdb-api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\react-movie-labs\\movies\\src\\components\\movieReviews\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:movies\\src\\components\\movieReviews\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\react-movie-labs\\movies\\src\\components\\movieReview\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:movies\\src\\components\\movieReview\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\react-movie-labs\\movies\\src\\components\\templateMoviePage\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:movies\\src\\components\\templateMoviePage\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\react-movie-labs\\movies\\src\\pages\\movieDetailsPage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:movies\\src\\pages\\movieDetailsPage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\react-movie-labs\\movies\\src\\components\\movieReviews\\index.js",
+              "RelativeDocumentMoniker": "movies\\src\\components\\movieReviews\\index.js",
+              "ToolTip": "C:\\react-movie-labs\\movies\\src\\components\\movieReviews\\index.js",
+              "RelativeToolTip": "movies\\src\\components\\movieReviews\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T11:51:46.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\react-movie-labs\\movies\\src\\components\\movieReview\\index.js",
+              "RelativeDocumentMoniker": "movies\\src\\components\\movieReview\\index.js",
+              "ToolTip": "C:\\react-movie-labs\\movies\\src\\components\\movieReview\\index.js",
+              "RelativeToolTip": "movies\\src\\components\\movieReview\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T11:50:49.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\react-movie-labs\\movies\\src\\components\\templateMoviePage\\index.js",
+              "RelativeDocumentMoniker": "movies\\src\\components\\templateMoviePage\\index.js",
+              "ToolTip": "C:\\react-movie-labs\\movies\\src\\components\\templateMoviePage\\index.js",
+              "RelativeToolTip": "movies\\src\\components\\templateMoviePage\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T11:46:59.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tmdb-api.js",
+              "DocumentMoniker": "C:\\react-movie-labs\\movies\\src\\api\\tmdb-api.js",
+              "RelativeDocumentMoniker": "movies\\src\\api\\tmdb-api.js",
+              "ToolTip": "C:\\react-movie-labs\\movies\\src\\api\\tmdb-api.js",
+              "RelativeToolTip": "movies\\src\\api\\tmdb-api.js",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T11:45:41.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "movieDetailsPage.js",
+              "DocumentMoniker": "C:\\react-movie-labs\\movies\\src\\pages\\movieDetailsPage.js",
+              "RelativeDocumentMoniker": "movies\\src\\pages\\movieDetailsPage.js",
+              "ToolTip": "C:\\react-movie-labs\\movies\\src\\pages\\movieDetailsPage.js",
+              "RelativeToolTip": "movies\\src\\pages\\movieDetailsPage.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T11:41:37.273Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
