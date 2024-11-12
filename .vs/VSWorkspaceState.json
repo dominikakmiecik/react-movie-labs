@@ -5,10 +5,12 @@
     "\\movies\\src",
     "\\movies\\src\\api",
     "\\movies\\src\\components",
+    "\\movies\\src\\components\\movieCard",
     "\\movies\\src\\components\\movieReview",
     "\\movies\\src\\components\\movieReviews",
-    "\\movies\\src\\components\\templateMoviePage"
+    "\\movies\\src\\components\\templateMoviePage",
+    "\\movies\\src\\pages"
   ],
-  "SelectedNode": "\\movies\\src\\api\\tmdb-api.js",
+  "SelectedNode": "\\movies\\src\\components\\filterMoviesCard",
   "PreviewInSolutionExplorer": false
 }
