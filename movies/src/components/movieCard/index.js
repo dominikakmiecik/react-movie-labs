@@ -15,7 +15,9 @@ import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import React, { useContext } from "react";
 import { MoviesContext } from "../../contexts/moviesContext";
-export default function MovieCard({ movie }) { 
+import { Action } from "react-router-dom";
+
+export default function MovieCard({ movie, action }) {
     const { favorites, addToFavorites } = useContext(MoviesContext);
 
     if (favorites.find((id) => id === movie.id)) {
@@ -70,14 +72,16 @@ export default function MovieCard({ movie }) {
                 </Grid>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites" onClick={handleAddToFavorite}>
-                    <FavoriteIcon color="primary" fontSize="large" />
-                </IconButton>
+                {typeof action === "function" && action(movie)}
+                
+
                 <Link to={`/movies/${movie.id}`}>
+
                     <Button variant="outlined" size="medium" color="primary">
                         More Info ...
                     </Button>
                 </Link>
+
             </CardActions>
         </Card>
     );
