@@ -6,14 +6,14 @@ import { MoviesContext } from "../../contexts/moviesContext";
 const RemoveFromFavoritesIcon = ({ movie }) => {
     const context = useContext(MoviesContext);
 
-    const handleRemoveFromFavorites = (e) => {
+    const handleAddToPlaylistIcon = (e) => {
         e.preventDefault();
         context.removeFromFavorites(movie);
     };
     return (
         <IconButton
             aria-label="remove from favorites"
-            onClick={handleRemoveFromFavorites}
+            onClick={handleAddToPlaylistIcon}
         >
             <DeleteIcon color="primary" fontSize="large" />
         </IconButton>
