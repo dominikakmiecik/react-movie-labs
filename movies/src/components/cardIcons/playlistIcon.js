@@ -9,8 +9,8 @@ const PlaylistIcon = ({ movie }) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        console.log("Adding to mustwatch", movie);
-        context.addToMustWatch(movie);
+        console.log("Adding to Watchlist", movie);
+        context.addToWatchList(movie);
     };
     return (
 
