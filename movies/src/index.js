@@ -12,7 +12,7 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
 import UpcomingMoviesPage from './pages/upcomingMoviesPage'
 import { Action } from "react-router-dom";
-
+import WatchListPage from './pages/watchListPage'
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
@@ -36,6 +36,7 @@ const App = () => {
                         <Route path="/" element={<HomePage />} />
                         <Route path="*" element={<Navigate to="/" />} />
                         <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
+                        <Route path="/movies/watchlist" element={< WatchListPage />} />
                         
                 
                     </Routes>

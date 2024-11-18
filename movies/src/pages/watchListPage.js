@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import PageTemplate from "../components/templateMovieListPage";
 import { MoviesContext } from "../contexts/moviesContext";
@@ -8,34 +9,55 @@ import WriteReview from "../components/cardIcons/writeReview";
 import PlaylistAddIcon from "../components/cardIcons/playlistIcon";
 
 const WatchListPage = () => {
-    const { watchlist, movieIds } = useContext(MoviesContext);
-    // Create an array of queries and run in parallel.
-    const MustWatcMovieQueries = useQueries(
+    const { watchlist: movieIds =[] } = useContext(MoviesContext);
+
+    const WatchlistMovieQueries = useQueries(
         movieIds.map((movieId) => {
             return {
                 queryKey: ["movie", { id: movieId }],
-                queryFn: getMovie,
+                queryFn:()=> getMovie(movieId),
             };
         })
     );
+
+    if (movieIds.length === 0) {
+        return(
+        <div>
+            your watch is empty
+            </div>
+        );
+    }
+
+    
     // Check if any of the parallel queries is still loading.
-    const isLoading = MustWatcMovieQueries.find((m) => m.isLoading === true);
+    const isLoading = WatchlistMovieQueries.some((m) => m.isLoading === true);
 
     if (isLoading) {
         return <Spinner />;
     }
+    const isError = WatchlistMovieQueries.some((m) => m.isError);
 
-    const movies = MustWatcMovieQueries.map((q) => {
-        q.data.genre_ids = q.data.genres.map(g => g.id)
-        return q.data
-    });
+    if (isError) {
+        return (
+            <div>
+                Error cant find any movies
+            </div>
+        );
+    }
 
-    const toDo = () => true;
+    const movies = WatchlistMovieQueries.map((q) => {
+        if (q.data && Array.isArray(q.data.genres))  {
+            q.data.genre_ids = q.data.genres.map(g => g.id)
+            return q.data
+        }
+        return null
+    }).filter((movie) => movie !== null);
 
+   
     return (
         <PageTemplate
             title="My Watchlist"
-            movies={watchlist}
+            movies={movies}
             action={(movie) => { 
               return (
                 <>
@@ -49,4 +71,4 @@ const WatchListPage = () => {
     );
 };
 
-export default WatchListPage;;
+export default WatchListPage;

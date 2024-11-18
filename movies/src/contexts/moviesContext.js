@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 export const MoviesContext = React.createContext(null);
 
 const MoviesContextProvider = (props) => {
@@ -20,14 +19,16 @@ const MoviesContextProvider = (props) => {
     const addToWatchList = (movie) => {
         let newWatchList = [];
         if (!watchList.includes(movie.id)) {
-            const newWatchList = [...watchList, movie.id];
+            newWatchList = [...watchList, movie.id];
             setWatchList(newWatchList);
             console.log("Must Watch list updated:", newWatchList); // Log for testing
         }
         else {
-            newWatchList = [...watchList];
+            newWatchList= [...watchList];
+
         }
         setWatchList(newWatchList)
+       
     };
 
     

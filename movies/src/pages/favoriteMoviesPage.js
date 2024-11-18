@@ -9,7 +9,7 @@ import WriteReview from "../components/cardIcons/writeReview";
 import PlaylistAddIcon from "../components/cardIcons/playlistIcon";
 
 const FavoriteMoviesPage = () => {
-    const { favorites: movieIds } = useContext(MoviesContext);
+    const { favorites: movieIds  } = useContext(MoviesContext);
 
     // Create an array of queries and run in parallel.
     const favoriteMovieQueries = useQueries(
