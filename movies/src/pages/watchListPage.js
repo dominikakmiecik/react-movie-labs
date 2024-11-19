@@ -9,7 +9,8 @@ import WriteReview from "../components/cardIcons/writeReview";
 import PlaylistAddIcon from "../components/cardIcons/playlistIcon";
 
 const WatchListPage = () => {
-    const { watchlist: movieIds =[] } = useContext(MoviesContext);
+    const { watchList: movieIds = [] } = useContext(MoviesContext);
+    console.log("watchlist working", movieIds);
 
     const WatchlistMovieQueries = useQueries(
         movieIds.map((movieId) => {
@@ -19,7 +20,7 @@ const WatchListPage = () => {
             };
         })
     );
-
+    console.log("Query Results:", WatchlistMovieQueries);
     if (movieIds.length === 0) {
         return(
         <div>

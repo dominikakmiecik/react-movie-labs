@@ -43,9 +43,9 @@ const MoviesContextProvider = (props) => {
     };
 
    
+    console.log("Current WatchList in Provider:", watchList);
+
    
-   
-    //console.log(myReviews);
     return (
         <MoviesContext.Provider
             value={{
@@ -53,13 +53,14 @@ const MoviesContextProvider = (props) => {
                 addToFavorites,
                 removeFromFavorites,
                 addReview,
+                watchList,
                 addToWatchList,
+              
             }}
         >
             {props.children}
         </MoviesContext.Provider>
     );
-
 }
 
 export default MoviesContextProvider;
