@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 export const MoviesContext = React.createContext(null);
 
 const MoviesContextProvider = (props) => {
     const [favorites, setFavorites] = useState([])
     const [myReviews, setMyReviews] = useState({})
-    const [watchList, setWatchList] = useState([]);
+    const [watchList, setWatchList] = useState([])
+    const [darkMode, setDarkMode] = useState(false)
+
+    useEffect(() => {
+        if (darkMode) {
+            document.body.classList.add("dark-mode");
+        }
+        else {
+            document.body.classList.remove("dark-mode");
+        }
+    }, [darkMode]);
 
     const addToFavorites = (movie) => {
         let newFavorites = [];
@@ -42,6 +52,11 @@ const MoviesContextProvider = (props) => {
         setMyReviews({ ...myReviews, [movie.id]: review })
     };
 
+    const toggleDarkMode = () => {
+        setDarkMode(prevMode => !prevMode)
+    };
+
+
    
     console.log("Current WatchList in Provider:", watchList);
 
@@ -55,6 +70,8 @@ const MoviesContextProvider = (props) => {
                 addReview,
                 watchList,
                 addToWatchList,
+                toggleDarkMode,
+                darkMode,
               
             }}
         >

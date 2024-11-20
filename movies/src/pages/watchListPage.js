@@ -52,7 +52,7 @@ const WatchListPage = () => {
             return q.data
         }
         return null
-    }).filter((movie) => movie !== null);
+    })
 
    
     return (

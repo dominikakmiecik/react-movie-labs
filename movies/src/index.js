@@ -29,6 +29,7 @@ const App = () => {
             <BrowserRouter>
                 <SiteHeader />
                 <MoviesContextProvider>
+                    <SiteHeader />
                     <Routes>
                         <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
                         <Route path="/reviews/:id" element={<MovieReviewPage />} />

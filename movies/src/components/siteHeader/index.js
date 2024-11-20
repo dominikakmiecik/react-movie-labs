@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -11,23 +11,27 @@ import { useNavigate } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { MoviesContext } from "../../contexts/moviesContext";
+
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 const SiteHeader = ({ history }) => {
     const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
+    const open = Boolean(anchorEl); 
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     const navigate = useNavigate();
-
+   
     const menuOptions = [
         { label: "Home", path: "/" },
         { label: "Favorites", path: "/movies/favorites" },
         { label: "Upcoming", path: "/movies/upcoming" },
-        { label: "Watchlist", path: "/movies/watchlist" },
+        { label: "Watchlist", path: "/movies/watchList" },
     ];
 
     const handleMenuSelect = (pageURL) => {
@@ -37,7 +41,8 @@ const SiteHeader = ({ history }) => {
     const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
     };
-
+    const { darkMode, toggleDarkMode } = useContext(MoviesContext);
+    
     return (
         <>
             <AppBar position="fixed" color="secondary">
@@ -97,6 +102,14 @@ const SiteHeader = ({ history }) => {
                             ))}
                         </>
                     )}
+                    <IconButton
+                        color="inherit"
+                        onClick = {toggleDarkMode}
+                    >
+                        {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+                        <MenuIcon />
+                    </IconButton>
+
                 </Toolbar>
             </AppBar>
             <Offset />
