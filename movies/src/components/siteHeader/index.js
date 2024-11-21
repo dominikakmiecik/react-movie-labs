@@ -33,6 +33,7 @@ const SiteHeader = ({ history }) => {
         { label: "Favorites", path: "/movies/favorites" },
         { label: "Upcoming", path: "/movies/upcoming" },
         { label: "Watchlist", path: "/movies/watchList" },
+        { label: "Trending", path: "/movies/trending" },
     ];
 
     const handleMenuSelect = (pageURL) => {
@@ -108,7 +109,7 @@ const SiteHeader = ({ history }) => {
                         onClick = {toggleDarkMode}
                     >
                         {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
-                        <MenuIcon />
+                        
                     </IconButton>
 
                 </Toolbar>

@@ -13,6 +13,7 @@ import AddMovieReviewPage from './pages/addMovieReviewPage'
 import UpcomingMoviesPage from './pages/upcomingMoviesPage'
 import { Action } from "react-router-dom";
 import WatchListPage from './pages/watchListPage'
+import TrendingPage from './pages/trendingPage'
 import './style/index.css';
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -39,6 +40,7 @@ const App = () => {
                         <Route path="*" element={<Navigate to="/" />} />
                         <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
                         <Route path="/movies/watchlist" element={< WatchListPage />} />
+                        <Route path="/movies/trending" element={< TrendingPage />} />
                         
                 
                     </Routes>
