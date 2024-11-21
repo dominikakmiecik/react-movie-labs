@@ -13,6 +13,7 @@ import AddMovieReviewPage from './pages/addMovieReviewPage'
 import UpcomingMoviesPage from './pages/upcomingMoviesPage'
 import { Action } from "react-router-dom";
 import WatchListPage from './pages/watchListPage'
+import './style/index.css';
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
@@ -27,7 +28,7 @@ const App = () => {
     return (
         <QueryClientProvider client={queryClient}>
             <BrowserRouter>
-                <SiteHeader />
+               
                 <MoviesContextProvider>
                     <SiteHeader />
                     <Routes>

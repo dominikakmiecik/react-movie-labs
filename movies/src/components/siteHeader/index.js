@@ -16,6 +16,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { MoviesContext } from "../../contexts/moviesContext";
 
 
+
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 const SiteHeader = ({ history }) => {
