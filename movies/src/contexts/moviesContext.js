@@ -6,6 +6,7 @@ const MoviesContextProvider = (props) => {
     const [myReviews, setMyReviews] = useState({})
     const [watchList, setWatchList] = useState([])
     const [darkMode, setDarkMode] = useState(false)
+    const [cast, setCast] = useState([]);
 
     useEffect(() => {
         if (darkMode) {
@@ -55,6 +56,9 @@ const MoviesContextProvider = (props) => {
     const toggleDarkMode = () => {
         setDarkMode(prevMode => !prevMode)
     };
+    const setMovieCast = (castData) => {
+        setCast(castData);
+    };
 
 
    
@@ -72,6 +76,9 @@ const MoviesContextProvider = (props) => {
                 addToWatchList,
                 toggleDarkMode,
                 darkMode,
+                setMovieCast,
+                cast,
+
               
             }}
         >
