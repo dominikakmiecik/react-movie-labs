@@ -3,16 +3,22 @@ import { useParams } from 'react-router-dom';
 import MovieDetails from "../components/movieDetails/";
 import PageTemplate from "../components/templateMoviePage";
 //import useMovie from "../hooks/useMovie";
-import { getMovie } from '../api/tmdb-api'
+import { getMovie, getCredits } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
+import useCast from "../hooks/useCast";
 import ActorCard from "../components/actorCard"; // Import ActorCard
 const MoviePage = (props) => {
     const { id } = useParams();
-    const { data: movie, error, isLoading, isError, actor } = useQuery(
+    const { data: movie, error, isLoading, isError, credits, getCredits, actor } = useQuery(
         ["movie", { id: id }],
-        getMovie
+      
+        getMovie, 
     );
+
+    const [cast] = useCast(id);
+
+
 
     if (isLoading) {
         return <Spinner />;
@@ -30,8 +36,11 @@ const MoviePage = (props) => {
                         <MovieDetails movie={movie} />
                         <div>
                             <h2>Cast</h2>
-                            <ActorCard actor={actor} />
+                            {cast.map((actor) => (
+                                <ActorCard actor={actor} />
+                            ))}
                         </div>
+                            
                     </PageTemplate>
                 </>
             ) : (
