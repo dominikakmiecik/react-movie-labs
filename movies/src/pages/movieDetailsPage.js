@@ -8,6 +8,7 @@ import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 import useCast from "../hooks/useCast";
 import ActorCard from "../components/actorCard"; // Import ActorCard
+import Grid from "@mui/material/Grid";
 const MoviePage = (props) => {
     const { id } = useParams();
     const { data: movie, error, isLoading, isError, credits, getCredits, actor } = useQuery(
@@ -36,9 +37,11 @@ const MoviePage = (props) => {
                         <MovieDetails movie={movie} />
                         <div>
                             <h2>Cast</h2>
+                            <Grid container spacing={2} border = '2px solid black' borderRadius ='10px' >
                             {cast.map((actor) => (
-                                <ActorCard actor={actor} />
+                                <ActorCard actor={actor}  />
                             ))}
+                        </Grid>
                         </div>
                             
                     </PageTemplate>

@@ -14,11 +14,11 @@ const ActorCard = ({ actor = {} }) => {
     const { name, character, profile_path, id, favorite } = actor;
 
     return (
-        <Card>
+        <Card borderRadius="2px solid black" border ="10px" >
             <CardHeader
                 avatar={
                     actor.favorite ? (
-                        <Avatar sx={{ backgroundColor: 'red' }}>
+                        <Avatar sx={{ border : '2px solid black', borderRadius:'10px', backgroundColor: 'red' }}>
                             <PersonIcon />
                         </Avatar>
                     ) : null
@@ -29,9 +29,10 @@ const ActorCard = ({ actor = {} }) => {
                     </Typography>
                 }
                 
-            />
+            />       
+
             <CardMedia
-                sx={{ height: 500 }}
+                sx={{ height: 500, border : '2px solid black', borderRadius:'10px'}}
                 image={
                     actor.profile_path
                         ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
@@ -41,7 +42,7 @@ const ActorCard = ({ actor = {} }) => {
             />
             <CardContent>
                 <Grid container>
-                    <Grid size={{ xs: 6 }}>
+                    <Grid size={{ xs: 6 }} >
                         <Typography variant="h6" component="p">
                             {`as ${actor.character}`}
                         </Typography>
